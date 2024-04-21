@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background{
+    height: 100%;
+    width: 100vw;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    background-color: #000;
+}
+.background::before{
+    opacity: .25;
+    content: '';
+    background-image: url(bg.png);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-position: center;
+    position:fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+div{
+    color: white;
+    width: 200px;
+    height: 100px;
+    border: 1px black solid;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    box-shadow: 2px 4px 5px #fff;
+    /* transform: translatex(400%); */
+    transition: transform .4s ease;
+} 
+
+h1{
+    color: white;
+    text-align: center;
+    margin: 20px;
+}
+
+.box{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem; /*this is just like saying padding*/
+    margin-bottom: 20px;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    transform: translateX(200vw);
+    transition: transform 1s ease;
+}
+
+.box:nth-of-type(even){
+    transform: translateX(-200vw);
+
+}
+
+.box.show{
+    transform: translateX(0);
+}
+
+:nth-child(even){
+    /* transform: translate(-400%); */
+}
